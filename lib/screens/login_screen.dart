@@ -13,6 +13,7 @@ class LoginScreen extends StatelessWidget {
     var color = Theme.of(context).colorScheme;
     var textTheme = Theme.of(context).textTheme;
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
           toolbarHeight: 70,
           leading: BackButton(onPressed: () {}, color: color.onTertiary),
