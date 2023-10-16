@@ -8,6 +8,7 @@ class Styles {
             primary: const Color.fromRGBO(107, 57, 244, 1),
             secondary: const Color.fromRGBO(201, 174, 251, 1),
             tertiary: const Color.fromRGBO(108, 59, 228, 1),
+            surface: const Color.fromRGBO(176, 180, 183, 1),
             background: const Color.fromRGBO(248, 249, 253, 1),
           ),
       textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme),
