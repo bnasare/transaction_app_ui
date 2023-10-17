@@ -10,7 +10,7 @@ class AuthButton extends StatelessWidget {
     var color = Theme.of(context).colorScheme;
 
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 30),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 25),
       child: FilledButton(
         onPressed: onPressed,
         style: ButtonStyle(

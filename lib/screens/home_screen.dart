@@ -10,6 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var color = Theme.of(context).colorScheme;
+    var textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
         appBar: AppBar(

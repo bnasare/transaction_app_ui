@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:transaction_app/screens/login_screen.dart';
-import 'package:transaction_app/screens/user_screen.dart';
 
 import 'consts/theme.dart';
 import 'screens/home_screen.dart';
+import 'screens/login_screen.dart';
+import 'screens/user_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then((_) {
     GoogleFonts.config.allowRuntimeFetching = false;
-    runApp(const MyApp());
+    runApp(
+      // DevicePreview(
+      //   enabled: !kReleaseMode,
+      // builder: (context) =>
+      const MyApp(),
+      // ),
+    );
   });
 }
 
