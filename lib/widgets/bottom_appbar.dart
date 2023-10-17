@@ -1,39 +1,78 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:transaction_app/screens/home_screen.dart';
+import 'package:transaction_app/screens/user_screen.dart';
 
-class CustomTab extends StatelessWidget {
-  final IconData icon;
-  final String label;
-  final bool isSelected;
-  final ColorScheme color;
-  final Function() onTap;
+import 'bottom_appbar_item.dart';
 
-  const CustomTab({
-    super.key,
-    required this.icon,
-    required this.label,
-    required this.isSelected,
-    required this.color,
-    required this.onTap,
-  });
+class CustomBottomAppBar extends StatelessWidget {
+  final int selectedIndex;
+
+  const CustomBottomAppBar({
+    Key? key,
+    required this.selectedIndex,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
+    final color = Theme.of(context).colorScheme;
+
+    return BottomAppBar(
+      height: 70,
+      elevation: 0,
+      color: color.surface,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Icon(
-            icon,
-            color: isSelected ? color.secondary : color.tertiary,
+          TabItem(
+            icon: IconlyLight.home,
+            label: 'Home',
+            index: 0,
+            color: color,
+            isSelected: selectedIndex == 0,
+            onTap: () {
+              Navigator.pushNamed(context, HomeScreen.routeName);
+            },
           ),
-          const SizedBox(height: 5),
-          Text(
-            label,
-            style: TextStyle(
-              fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
-              color: isSelected ? color.onTertiary : color.tertiary,
+          TabItem(
+            icon: CupertinoIcons.cube,
+            label: 'Packet',
+            index: 1,
+            color: color,
+            isSelected: selectedIndex == 1,
+            onTap: () {},
+          ),
+          SizedBox(
+            height: 50,
+            width: 50,
+            child: FloatingActionButton(
+              backgroundColor: color.secondary,
+              onPressed: () {},
+              child: Icon(
+                CupertinoIcons.add,
+                size: 28,
+                color: color.surface,
+              ),
             ),
+          ),
+          TabItem(
+            icon: IconlyLight.discount,
+            label: 'Discount',
+            index: 2,
+            color: color,
+            isSelected: selectedIndex == 2,
+            onTap: () {},
+          ),
+          TabItem(
+            icon: IconlyLight.profile,
+            label: 'Profile',
+            index: 3,
+            color: color,
+            isSelected: selectedIndex == 3,
+            onTap: () {
+              Navigator.pushNamed(context, UserScreen.routeName);
+            },
           ),
         ],
       ),

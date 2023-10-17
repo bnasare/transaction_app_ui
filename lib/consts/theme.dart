@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 class Styles {
   static ThemeData themeData(BuildContext context) {
     return ThemeData(
-      scaffoldBackgroundColor: Colors.white,
       colorScheme: ThemeData().colorScheme.copyWith(
             primary: const Color.fromRGBO(107, 57, 244, 1),
             onPrimary: const Color.fromRGBO(201, 174, 251, 1),

@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 
 class GoogleSocialAuthButton extends StatelessWidget {
-  final ImageProvider image;
-  final String text;
   final VoidCallback onPressed;
 
   const GoogleSocialAuthButton({
     super.key,
-    required this.image,
-    required this.text,
     required this.onPressed,
   });
 
@@ -16,26 +12,28 @@ class GoogleSocialAuthButton extends StatelessWidget {
   Widget build(BuildContext context) {
     var color = Theme.of(context).colorScheme;
 
-    return InkWell(
+    return GestureDetector(
       onTap: onPressed,
       child: Container(
         margin: const EdgeInsets.only(right: 20),
         padding: const EdgeInsets.symmetric(horizontal: 30),
         height: 50,
         decoration: BoxDecoration(
-          color: color.surface,
           borderRadius: BorderRadius.circular(30),
           border: Border.all(
-            color: color.tertiary,
+            color: color.onSecondary.withOpacity(0.3),
           ),
         ),
-        child: Row(
+        child: const Row(
           children: [
-            Image(image: image, height: 25, width: 25),
-            const SizedBox(width: 10),
+            Image(
+                image: AssetImage('assets/images/google.png'),
+                height: 25,
+                width: 25),
+            SizedBox(width: 10),
             Text(
-              text,
-              style: const TextStyle(
+              'Google',
+              style: TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 17,
               ),

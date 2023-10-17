@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:transaction_app/screens/home_screen.dart';
 import 'package:transaction_app/widgets/apple_social_auth_button.dart';
 import 'package:transaction_app/widgets/auth_button.dart';
 import 'package:transaction_app/widgets/google_social_auth_button.dart';
@@ -91,7 +92,9 @@ class LoginScreen extends StatelessWidget {
                           style: textTheme.bodyMedium?.copyWith(
                               color: color.primary,
                               fontWeight: FontWeight.w600))))),
-          AuthButton(text: 'Log In', onPressed: () {}),
+          AuthButton(onPressed: () {
+            Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+          }),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40.0),
             child: Row(
@@ -112,14 +115,8 @@ class LoginScreen extends StatelessWidget {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    AppleSocialAuthButton(
-                        image: const AssetImage('assets/images/apple_logo.png'),
-                        text: 'Apple',
-                        onPressed: () {}),
-                    GoogleSocialAuthButton(
-                        image: const AssetImage('assets/images/google.png'),
-                        text: 'Google',
-                        onPressed: () {})
+                    AppleSocialAuthButton(onPressed: () {}),
+                    GoogleSocialAuthButton(onPressed: () {})
                   ])),
           const Spacer(),
           Padding(

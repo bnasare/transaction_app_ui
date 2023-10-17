@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AppleSocialAuthButton extends StatelessWidget {
-  final ImageProvider image;
-  final String text;
   final VoidCallback onPressed;
 
   const AppleSocialAuthButton({
     super.key,
-    required this.image,
-    required this.text,
     required this.onPressed,
   });
 
@@ -16,26 +12,28 @@ class AppleSocialAuthButton extends StatelessWidget {
   Widget build(BuildContext context) {
     var color = Theme.of(context).colorScheme;
 
-    return InkWell(
+    return GestureDetector(
       onTap: onPressed,
       child: Container(
         margin: const EdgeInsets.only(left: 20),
         padding: const EdgeInsets.symmetric(horizontal: 30),
         height: 50,
         decoration: BoxDecoration(
-          color: color.surface,
           borderRadius: BorderRadius.circular(30),
           border: Border.all(
-            color: color.tertiary,
+            color: color.onSecondary.withOpacity(0.3),
           ),
         ),
-        child: Row(
+        child: const Row(
           children: [
-            Image(image: image, height: 40, width: 40),
-            const SizedBox(width: 3),
+            Image(
+                image: AssetImage('assets/images/apple_logo.png'),
+                height: 40,
+                width: 40),
+            SizedBox(width: 3),
             Text(
-              text,
-              style: const TextStyle(
+              'Apple',
+              style: TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 17,
               ),
