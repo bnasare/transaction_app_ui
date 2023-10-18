@@ -26,7 +26,7 @@ class CustomBottomAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           TabItem(
-            icon: IconlyLight.home,
+            icon: CupertinoIcons.house_alt,
             label: 'Home',
             index: 0,
             color: color,

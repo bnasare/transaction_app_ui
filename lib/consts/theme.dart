@@ -4,15 +4,16 @@ import 'package:google_fonts/google_fonts.dart';
 class Styles {
   static ThemeData themeData(BuildContext context) {
     return ThemeData(
-      scaffoldBackgroundColor: Colors.grey.shade100,
+      scaffoldBackgroundColor: const Color(0xFFF5F5F5),
+      cardColor: const Color(0xFFFFFFFF),
       colorScheme: ThemeData().colorScheme.copyWith(
-            primary: const Color.fromRGBO(107, 57, 244, 1),
-            onPrimary: const Color.fromRGBO(201, 174, 251, 1),
-            secondary: const Color.fromRGBO(108, 59, 228, 1),
-            onSecondary: const Color.fromARGB(255, 163, 168, 172),
-            tertiary: const Color.fromARGB(121, 224, 224, 237),
-            onTertiary: const Color.fromRGBO(15, 17, 29, 1),
-            surface: Colors.white,
+            primary: const Color(0xFF6B39F4),
+            onPrimary: const Color.fromARGB(255, 191, 160, 250),
+            secondary: const Color(0xFF6C3BE4),
+            onSecondary: const Color(0xFFA3A8AC),
+            tertiary: const Color(0x79E0E0ED),
+            onTertiary: const Color(0xFF0F111D),
+            surface: const Color(0xFFFFFFFF),
           ),
       textTheme: GoogleFonts.robotoTextTheme(),
     );
