@@ -7,7 +7,7 @@ class ServiceIconsRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 23, right: 23, top: 10),
+      padding: const EdgeInsets.only(left: 23, right: 23, top: 10, bottom: 40),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -57,8 +57,8 @@ class ServiceOptionButton extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 50,
-          width: 50,
+          height: 60,
+          width: 60,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             gradient: LinearGradient(

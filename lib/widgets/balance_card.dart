@@ -101,7 +101,7 @@ class UserBalanceCard extends StatelessWidget {
             padding: const EdgeInsets.only(
               left: 20,
               right: 20,
-              bottom: 15,
+              bottom: 011,
             ),
             child: Row(
               children: [
@@ -128,12 +128,15 @@ class UserBalanceCard extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                Text(
-                  'Details',
-                  style: TextStyle(
-                    color: color.onPrimary,
-                    fontWeight: FontWeight.w600,
+                TextButton(
+                  child: Text(
+                    'Details',
+                    style: TextStyle(
+                      color: color.onPrimary,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
+                  onPressed: () {},
                 ),
               ],
             ),

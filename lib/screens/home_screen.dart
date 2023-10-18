@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:transaction_app/widgets/balance_card.dart';
+import 'package:transaction_app/widgets/new_discount_card_widget.dart';
+import 'package:transaction_app/widgets/packet_discount_card_widget.dart';
 import 'package:transaction_app/widgets/service_icons_row.dart';
 
 import '../widgets/bottom_appbar.dart';
@@ -59,26 +61,28 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 12, right: 25),
-                        child: CircleAvatar(
-                          radius: 24,
-                          backgroundColor: color.tertiary.withOpacity(0.2),
-                          child: Badge(
-                            alignment: Alignment.topRight,
-                            backgroundColor: Colors.transparent,
-                            label: Material(
-                              color: color.surface,
-                              shape: const CircleBorder(),
-                              child: const Padding(
-                                padding: EdgeInsets.all(1.0),
-                                child: Icon(Icons.circle,
-                                    color: Colors.red, size: 9),
+                        child: InkWell(
+                          onTap: () {},
+                          child: CircleAvatar(
+                            radius: 24,
+                            backgroundColor: color.tertiary.withOpacity(0.2),
+                            child: Badge(
+                              alignment: Alignment.topRight,
+                              backgroundColor: Colors.transparent,
+                              label: Material(
+                                color: color.surface,
+                                shape: const CircleBorder(),
+                                child: const Padding(
+                                  padding: EdgeInsets.all(1.0),
+                                  child: Icon(Icons.circle,
+                                      color: Colors.red, size: 9),
+                                ),
                               ),
-                            ),
-                            //!
-                            child: Icon(
-                              IconlyLight.notification,
-                              size: 26,
-                              color: color.surface,
+                              child: Icon(
+                                IconlyLight.notification,
+                                size: 26,
+                                color: color.surface,
+                              ),
                             ),
                           ),
                         ),
@@ -94,24 +98,37 @@ class HomeScreen extends StatelessWidget {
             left: 0,
             right: 0,
             child: Container(
-              height: MediaQuery.of(context).size.height,
-              decoration: BoxDecoration(
+                height: MediaQuery.of(context).size.height,
+                decoration: BoxDecoration(
                   color: Theme.of(context).scaffoldBackgroundColor,
                   borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20))),
-              child: SingleChildScrollView(
-                physics: const BouncingScrollPhysics(),
-                controller: ScrollController(),
-                child: const Column(
-                  children: [
-                    UserBalanceCard(),
-                    ServiceIconsRow(),
-                  ],
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                  ),
                 ),
-              ),
-            ),
-          ),
+                child: SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const UserBalanceCard(),
+                      const ServiceIconsRow(),
+                      SizedBox(
+                        height: 140,
+                        child: ListView(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          physics: const PageScrollPhysics(),
+                          children: const [
+                            PacketDiscountCardWidget(),
+                            NewDiscountCardWidget(),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                )),
+          )
         ],
       ),
       bottomNavigationBar: const CustomBottomAppBar(selectedIndex: 0),
