@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NewDiscountCardWidget extends StatelessWidget {
-  const NewDiscountCardWidget({super.key});
+  const NewDiscountCardWidget({super.key, required this.isActive});
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {

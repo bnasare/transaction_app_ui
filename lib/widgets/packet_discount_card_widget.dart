@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PacketDiscountCardWidget extends StatelessWidget {
-  const PacketDiscountCardWidget({super.key});
+  const PacketDiscountCardWidget({super.key, required this.isActive});
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {

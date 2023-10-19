@@ -1,9 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:transaction_app/screens/home_screen.dart';
-import 'package:transaction_app/widgets/apple_social_auth_button.dart';
-import 'package:transaction_app/widgets/auth_button.dart';
-import 'package:transaction_app/widgets/google_social_auth_button.dart';
+
+import '../widgets/apple_social_auth_button.dart';
+import '../widgets/auth_button.dart';
+import '../widgets/google_social_auth_button.dart';
+import 'home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   static const routeName = '/login';
@@ -30,21 +31,18 @@ class LoginScreen extends StatelessWidget {
                       backgroundColor: color.tertiary,
                       child: Image.asset('assets/images/purple_face.png',
                           fit: BoxFit.cover, height: 65, width: 65)))),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text('Hi, Welcome Back!',
-                  style: textTheme.titleLarge
-                      ?.copyWith(fontWeight: FontWeight.w600, fontSize: 25)),
-              Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 17.0),
-                  child: Text('Log in to your account.',
-                      style: TextStyle(
-                          color: color.onSecondary,
-                          fontSize: 17.5,
-                          fontWeight: FontWeight.w500))),
-            ],
-          ),
+          Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+            Text('Hi, Welcome Back!',
+                style: textTheme.titleLarge
+                    ?.copyWith(fontWeight: FontWeight.w600, fontSize: 25)),
+            Padding(
+                padding: const EdgeInsets.symmetric(vertical: 17.0),
+                child: Text('Log in to your account.',
+                    style: TextStyle(
+                        color: color.onSecondary,
+                        fontSize: 17.5,
+                        fontWeight: FontWeight.w500))),
+          ]),
           Padding(
               padding: const EdgeInsets.all(20.0),
               child: TextField(
@@ -102,19 +100,16 @@ class LoginScreen extends StatelessWidget {
             Navigator.pushReplacementNamed(context, HomeScreen.routeName);
           }),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40.0),
-            child: Row(
-              children: [
+              padding: const EdgeInsets.symmetric(horizontal: 40.0),
+              child: Row(children: [
                 Flexible(child: Divider(color: color.onSecondary)),
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Text("Or login with",
                         style: textTheme.titleMedium
                             ?.copyWith(color: color.onSecondary))),
-                Flexible(child: Divider(color: color.onSecondary)),
-              ],
-            ),
-          ),
+                Flexible(child: Divider(color: color.onSecondary))
+              ])),
           Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 0.0, vertical: 30),

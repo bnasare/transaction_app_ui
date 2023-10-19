@@ -4,12 +4,12 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:transaction_app/screens/home_screen.dart';
 import 'package:transaction_app/screens/user_screen.dart';
 
-import 'bottom_appbar_item.dart';
+import 'bottom_tab_item.dart';
 
-class CustomBottomAppBar extends StatelessWidget {
+class CustomBottomNavigation extends StatelessWidget {
   final int selectedIndex;
 
-  const CustomBottomAppBar({
+  const CustomBottomNavigation({
     Key? key,
     required this.selectedIndex,
   }) : super(key: key);
@@ -25,7 +25,7 @@ class CustomBottomAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          TabItem(
+          BottomTabItem(
             icon: CupertinoIcons.house_alt,
             label: 'Home',
             index: 0,
@@ -35,7 +35,7 @@ class CustomBottomAppBar extends StatelessWidget {
               Navigator.pushNamed(context, HomeScreen.routeName);
             },
           ),
-          TabItem(
+          BottomTabItem(
             icon: CupertinoIcons.cube,
             label: 'Packet',
             index: 1,
@@ -56,7 +56,7 @@ class CustomBottomAppBar extends StatelessWidget {
               ),
             ),
           ),
-          TabItem(
+          BottomTabItem(
             icon: IconlyLight.discount,
             label: 'Discount',
             index: 2,
@@ -64,7 +64,7 @@ class CustomBottomAppBar extends StatelessWidget {
             isSelected: selectedIndex == 2,
             onTap: () {},
           ),
-          TabItem(
+          BottomTabItem(
             icon: IconlyLight.profile,
             label: 'Profile',
             index: 3,

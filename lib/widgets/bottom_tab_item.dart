@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TabItem extends StatelessWidget {
+class BottomTabItem extends StatelessWidget {
   final IconData icon;
   final String label;
   final int index;
@@ -8,7 +8,7 @@ class TabItem extends StatelessWidget {
   final Function() onTap;
   final bool isSelected;
 
-  const TabItem({
+  const BottomTabItem({
     Key? key,
     required this.icon,
     required this.label,
