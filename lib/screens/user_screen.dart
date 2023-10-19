@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
-import '../widgets/bottom_appbar.dart';
-import '../widgets/custom_divider.dart';
-import '../widgets/custom_list_tile.dart';
-import '../widgets/user_profile_card.dart';
+import '../widgets/bottom_appbar_widget.dart';
+import '../widgets/custom_divider_widget.dart';
+import '../widgets/custom_list_tile_widget.dart';
+import '../widgets/user_profile_card_widget.dart';
 
 class UserScreen extends StatelessWidget {
   static const routeName = '/user';

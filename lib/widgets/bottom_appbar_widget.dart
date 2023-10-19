@@ -4,7 +4,7 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:transaction_app/screens/home_screen.dart';
 import 'package:transaction_app/screens/user_screen.dart';
 
-import 'bottom_tab_item.dart';
+import 'bottom_tab_item_widget.dart';
 
 class CustomBottomNavigation extends StatelessWidget {
   final int selectedIndex;

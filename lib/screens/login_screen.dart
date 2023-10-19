@@ -2,8 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/apple_social_auth_button.dart';
-import '../widgets/auth_button.dart';
-import '../widgets/google_social_auth_button.dart';
+import '../widgets/auth_button_widget.dart';
+import '../widgets/google_social_auth_button_widget.dart';
 import 'home_screen.dart';
 
 class LoginScreen extends StatelessWidget {

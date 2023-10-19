@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'custom_divider.dart';
+import 'custom_divider_widget.dart';
 
 class UserBalanceCard extends StatelessWidget {
   const UserBalanceCard({super.key});

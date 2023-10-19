@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:transaction_app/widgets/insight_for_you_widget.dart';
 
 import '../consts/insight_item.dart';
-import '../widgets/balance_card.dart';
-import '../widgets/bottom_appbar.dart';
+import '../widgets/bottom_appbar_widget.dart';
 import '../widgets/new_discount_card_widget.dart';
-import '../widgets/notification_icon.dart';
+import '../widgets/notification_icon_widget.dart';
 import '../widgets/packet_discount_card_widget.dart';
-import '../widgets/search_bar.dart';
-import '../widgets/service_icons_row.dart';
+import '../widgets/search_bar_widget.dart';
+import '../widgets/service_icons_row_widget.dart';
+import '../widgets/user_balance_card_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeName = '/home';
