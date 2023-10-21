@@ -111,18 +111,17 @@ class LoginScreen extends StatelessWidget {
                 Flexible(child: Divider(color: color.onSecondary))
               ])),
           Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Flexible(
-                  fit: FlexFit.loose,
-                  child: AppleSocialAuthButton(onPressed: () {})),
-              const SizedBox(width: 18),
-              Flexible(
-                  fit: FlexFit.loose,
-                  child: GoogleSocialAuthButton(onPressed: () {}))
-            ],
-          ),
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Flexible(
+                    fit: FlexFit.loose,
+                    child: AppleSocialAuthButton(onPressed: () {})),
+                const SizedBox(width: 18),
+                Flexible(
+                    fit: FlexFit.loose,
+                    child: GoogleSocialAuthButton(onPressed: () {}))
+              ]),
           const Spacer(),
           Center(
             child: Padding(
@@ -142,7 +141,7 @@ class LoginScreen extends StatelessWidget {
                         style: TextStyle(
                             color: color.primary,
                             fontWeight: FontWeight.w600,
-                            fontSize: 18)),
+                            fontSize: 18))
                   ],
                 ),
               ),
