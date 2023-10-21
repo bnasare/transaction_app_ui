@@ -100,7 +100,7 @@ class LoginScreen extends StatelessWidget {
             Navigator.pushReplacementNamed(context, HomeScreen.routeName);
           }),
           Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40.0),
+              padding: const EdgeInsets.only(left: 40.0, right: 40, bottom: 30),
               child: Row(children: [
                 Flexible(child: Divider(color: color.onSecondary)),
                 Padding(
@@ -110,15 +110,19 @@ class LoginScreen extends StatelessWidget {
                             ?.copyWith(color: color.onSecondary))),
                 Flexible(child: Divider(color: color.onSecondary))
               ])),
-          Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 0.0, vertical: 30),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    AppleSocialAuthButton(onPressed: () {}),
-                    GoogleSocialAuthButton(onPressed: () {})
-                  ])),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Flexible(
+                  fit: FlexFit.loose,
+                  child: AppleSocialAuthButton(onPressed: () {})),
+              const SizedBox(width: 18),
+              Flexible(
+                  fit: FlexFit.loose,
+                  child: GoogleSocialAuthButton(onPressed: () {}))
+            ],
+          ),
           const Spacer(),
           Center(
             child: Padding(

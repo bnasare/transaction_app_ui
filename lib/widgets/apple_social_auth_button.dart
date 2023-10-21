@@ -16,7 +16,7 @@ class AppleSocialAuthButton extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         margin: const EdgeInsets.only(left: 20),
-        padding: const EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 25),
         height: 50,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
@@ -25,6 +25,7 @@ class AppleSocialAuthButton extends StatelessWidget {
           ),
         ),
         child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image(
                 image: AssetImage('assets/images/apple_logo.png'),

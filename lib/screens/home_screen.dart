@@ -129,10 +129,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           itemBuilder: (BuildContext context, int index) {
                             return Padding(
                                 padding: EdgeInsets.only(
-                                  left: index == 0 ? 23 : 15,
-                                  right:
-                                      index == insightItems.length - 1 ? 23 : 0,
-                                ),
+                                    left: index == 0 ? 23 : 15,
+                                    right: index == insightItems.length - 1
+                                        ? 23
+                                        : 0),
                                 child: InsightForYouWidget(
                                     item: insightItems[index]));
                           },
