@@ -12,14 +12,14 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var color = Theme.of(context).colorScheme;
-    var textTheme = Theme.of(context).textTheme;
+    final color = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
           leading: BackButton(onPressed: () {}, color: color.onTertiary),
-          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+          backgroundColor: Colors.transparent,
           elevation: 0),
       body: Column(
         children: [
@@ -45,7 +45,7 @@ class LoginScreen extends StatelessWidget {
           ]),
           Padding(
               padding: const EdgeInsets.all(20.0),
-              child: TextField(
+              child: TextFormField(
                   textInputAction: TextInputAction.next,
                   onEditingComplete: () => FocusScope.of(context).nextFocus(),
                   decoration: InputDecoration(
@@ -65,8 +65,8 @@ class LoginScreen extends StatelessWidget {
                           const EdgeInsets.symmetric(vertical: 17)))),
           Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, bottom: 7),
-              child: TextField(
-                  textInputAction: TextInputAction.next,
+              child: TextFormField(
+                  textInputAction: TextInputAction.done,
                   decoration: InputDecoration(
                       filled: true,
                       fillColor: color.tertiary,

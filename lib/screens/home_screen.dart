@@ -33,13 +33,12 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             Container(
+                padding: const EdgeInsets.only(top: 70.0, bottom: 23),
                 color: color.secondary,
-                child: Padding(
-                    padding: const EdgeInsets.only(top: 70.0, bottom: 23),
-                    child: Row(children: [
-                      SearchBarWidget(color: color),
-                      NotificationIcon(color: color),
-                    ]))),
+                child: Row(children: [
+                  SearchBarWidget(color: color),
+                  NotificationIcon(color: color),
+                ])),
             Stack(
               children: [
                 Container(
@@ -80,6 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     NewDiscountCardWidget(
                                         isActive: activeIndex == 1)
                                   ]))),
+                      //! List.generate needed here for the containers
                       Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -120,6 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 color.primary.withOpacity(0.5),
                                             fontWeight: FontWeight.w600)))
                               ])),
+                      //!listview.separated
                       SizedBox(
                         height: 230,
                         child: ListView.builder(

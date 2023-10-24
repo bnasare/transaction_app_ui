@@ -25,6 +25,7 @@ class UserScreen extends StatelessWidget {
               color: color.surface.withOpacity(0.8),
               child: const UserProfileCard(),
             ),
+            //! Create a list and loop over it
             Container(
               color: color.surface.withOpacity(0.8),
               child: Column(
@@ -36,7 +37,7 @@ class UserScreen extends StatelessWidget {
                     child: Text(
                       'Account Details',
                       style: textTheme.titleMedium
-                          ?.copyWith(fontWeight: FontWeight.w600, fontSize: 18),
+                          ?.copyWith(fontWeight: FontWeight.w600, fontSize: 20),
                     ),
                   ),
                   CustomListTile(
@@ -83,7 +84,7 @@ class UserScreen extends StatelessWidget {
                     child: Text(
                       'Settings',
                       style: textTheme.titleMedium
-                          ?.copyWith(fontWeight: FontWeight.w600, fontSize: 18),
+                          ?.copyWith(fontWeight: FontWeight.w600, fontSize: 20),
                     ),
                   ),
                   CustomListTile(
